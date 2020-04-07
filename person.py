@@ -41,7 +41,7 @@ def main():
     transparency = np.append(np.array(image)[:, :, 0:3], prediction[: , :, None], axis=-1)
     png = Image.fromarray(transparency)
 
-    png.save('output.png')
+    png.save('/output/output1.png')
 
     print()
     print("saved the output image in output.png")
