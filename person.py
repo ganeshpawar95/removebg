@@ -28,7 +28,7 @@ def main():
     print()
     print("Removing background...")
     print()
-    image = Image.open('/home/python3.6/removebg/8230b3e601bd66e593423e8004058d84.jpg')
+    image = Image.open('/home/python3.6/removebg/img2.jpg')
     image1 = imresize(image, (224, 224)) / 255.0
 
     prediction = predict(image1[:, :, 0:3])
@@ -41,7 +41,7 @@ def main():
     transparency = np.append(np.array(image)[:, :, 0:3], prediction[: , :, None], axis=-1)
     png = Image.fromarray(transparency)
 
-    png.save('outputboy2.png')
+    png.save('img2output.png')
 
     print()
     print("saved the output image in output.png")
