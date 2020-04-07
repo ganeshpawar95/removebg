@@ -7,7 +7,7 @@ import cv2
 
 # Load the pre-trained model
 # provide main_model.hdf5 / main_model_2.hdf5 for the name of model
-model = load_model('main_model.hdf5', compile=False)
+model = load_model('main_model_2.hdf5', compile=False)
 
 graph = tf.get_default_graph()
 
@@ -28,7 +28,7 @@ def main():
     print()
     print("Removing background...")
     print()
-    image = Image.open('/home/python3.6/removebg/indian-god-R93EYF.jpg')
+    image = Image.open('/home/python3.6/removebg/8230b3e601bd66e593423e8004058d84.jpg')
     image1 = imresize(image, (224, 224)) / 255.0
 
     prediction = predict(image1[:, :, 0:3])
@@ -41,7 +41,7 @@ def main():
     transparency = np.append(np.array(image)[:, :, 0:3], prediction[: , :, None], axis=-1)
     png = Image.fromarray(transparency)
 
-    png.save('outputgoad.png')
+    png.save('outputboy2.png')
 
     print()
     print("saved the output image in output.png")
