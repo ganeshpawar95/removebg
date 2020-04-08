@@ -5,7 +5,7 @@ import numpy as np
 print()
 print('##################################################################')
 print()
-address ='/home/python3.6/removebg/img2.jpg'
+address ='/home/python3.6/removebg/img1.png'
 print()
 print('##################################################################')
 print()
@@ -58,7 +58,7 @@ dst = cv2.merge(rgba,4)
 
 # Display
 cv2.waitKey()
-cv2.imwrite("outputopencp.png",dst)
+cv2.imwrite("outputopencp1.png",dst)
 print("saved the output image in output.png")
 print()
 print('##################################################################')
