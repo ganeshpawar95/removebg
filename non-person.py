@@ -5,7 +5,7 @@ import numpy as np
 print()
 print('##################################################################')
 print()
-address = input('Enter path of file: ')
+address ='/home/python3.6/removebg/img2.jpg'
 print()
 print('##################################################################')
 print()
@@ -57,9 +57,8 @@ rgba = [b,g,r, alpha]
 dst = cv2.merge(rgba,4)
 
 # Display
-cv2.imshow('img', dst)
 cv2.waitKey()
-cv2.imwrite("output.png",dst)
+cv2.imwrite("outputopencp.png",dst)
 print("saved the output image in output.png")
 print()
 print('##################################################################')
