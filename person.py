@@ -7,7 +7,7 @@ import cv2
 
 # Load the pre-trained model
 # provide main_model.hdf5 / main_model_2.hdf5 for the name of model
-model = load_model('tiramisu_2_classes_with_weights.h5', compile=False)
+model = load_model('main_model.hdf5', compile=False)
 
 graph = tf.get_default_graph()
 
@@ -41,7 +41,7 @@ def main():
     transparency = np.append(np.array(image)[:, :, 0:3], prediction[: , :, None], axis=-1)
     png = Image.fromarray(transparency)
 
-    png.save('img3output.png')
+    png.save('img4output.png')
 
     print()
     print("saved the output image in output.png")
